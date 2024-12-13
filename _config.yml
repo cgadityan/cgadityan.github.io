@@ -1,66 +1,92 @@
-# Jekyll configuration
-#markdown: redcarpet
-#highlighter: pygments
+title: Narendiran Chembu
+# logo: "images/logo.svg" # You can add own logo image.
+logo: images/cg_logo.png
+description: Personal Website
+baseurl: "" # The subpath of your site, e.g. /blog
+url: "" # The base hostname & protocol for your site, e.g. http://example.com
+
+# Author Settings
+author:
+  name: Narendiran Chembu
+  # bio: Hi, my name is Narendiran Chembu. 
+
+# Contact links
+# twitter: https://twitter.com/ # Add your Twitter handle
+facebook: https://facebook.com/cgnarendiran/ # Add your Facebook handle
+# dribbble: https://dribbble.com/ # Add your Dribbble handle
+instagram: https://instagram.com/cgnarendiran/ # Add your Instagram handle
+# pinterest: https://pinterest.com/ # Add your Pinterest handle
+email: cgnarendiran@gmail.com # Add your Email address
+linkedin: https://linkedin.com/in/cgnarendiran/
+
+# Hero Section
+hero: true # To enable the section hero, use the value true. To turn off use the value false.
+hero-title: Narendiran Chembu # Add your hero title
+hero-subtitle: |
+  Trying to understand this resplendent chaos called life.
+  You can read more <a style="color:turquoise" href="/about/">about me</a> or check out <a style="color:turquoise"  href="/blog/">my blog</a> 
+  and <a style="color:turquoise"  href="/projects/">projects</a> 
+# Add your hero subtitle
+hero-image: images/ml_bb_6.jpg # Add background image in section hero 
+
+# Footer
+footer-image: images/ml_bb_6.jpg # Add background image in footer
+
+# Comment Section (Disqus)
+# disqus-identifier: cgnarendiran # Add your shortname for Disqus Comment. For example mr-brown
+
+# Google Analytics
+google-analytics: "" # Add your identifier. For example UA-99631805-1.
+
+# Newsletter
+mailchimp: "" # Add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
+
+# Build settings
 markdown: kramdown
-highlighter: rouge
-paginate: 5
-language: 'en-uk'
+permalink: pretty
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll/tagging
 
-# Website info
-name: 'Finding The Way Home'
-description: "A beautiful narrative written with the world's most elegant publishing platform. The story begins here."
+paginate: 4
+# paginate_path: "/page/:num"
+paginate_path: "/blog/page:num/"
 
-short_url: 'jekyllt.github.io/jasper/'
-google_analytics: UA-69281367-1
-disqus: username
-# edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /jasper/
+# Pages Path
+# defaults:
+#   - scope:
+#       path: '_pages'
+#     values:
+#       permalink: /:basename:output_ext
+include:
+  - _pages
 
-# Permalinks
-permalink: /:title
-# permalink: /author/:username
-# permalink: /tag/:tag
-
-# gems and other configs
-plugins: [jekyll-paginate]
-
-# Additional settings available on the front-matter
-# Site logo in the index.html (as in demo.ghost.io)
-# Author's page cover in _layouts/author.html
-# The same for page.html and tag.html layouts
-# Post's page cover as a per-post basis _posts/...
-# Disqus comments as a per-post basis
-# ...
+collections:
+  projects:
+    output: true
 
 
-# Settings for builing master branch with travis-ci
-# with jekyll-travis
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+      permalink: "/projects/:title/"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: "/blog/:title/"
 
-# Settings for deploy rake task
-# Username and repo of Github repo, e.g.
-# https://github.com/USERNAME/REPO.git
-# username defaults to ENV['GIT_NAME'] used by Travis
-# repo defaults to USERNAME.github.io
-# Branch defaults to "source" for USERNAME.github.io
-# or "master" otherwise
-safe: false
-lsi: false
-username: jekyllt
-repo: jasper
-branch: master
-relative_source: ../jasper/
-destination: ../jasper-pages/
-production_url:  https://jekyllt.github.io/jasper/
-source_url:  https://github.com/jekyllt/jasper/
 
-exclude:
-  - README.md
-  - Rakefile
-  - Gemfile
-  - Gemfile.lock
-  - changelog.md
-  - "*.Rmd"
-  - vendor
-  - .travis.yml
-  - node_modules
-  - .git
+# Tags
+tag_page_dir:         tag
+tag_page_layout:      tag_page
+tag_permalink_style:  pretty
+
+sass:
+  sass_dir: _sass
+  style: compressed
