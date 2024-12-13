@@ -1,4 +1,4 @@
-title: Adityan Chembu
+title: Adityan CG
 # logo: "images/logo.svg" # You can add own logo image.
 logo: images/cg_logo.png
 description: Personal Website
@@ -8,20 +8,20 @@ url: "" # The base hostname & protocol for your site, e.g. http://example.com
 # Author Settings
 author:
   name: Adityan CG
-  # bio: Hi, my name is Narendiran Chembu. 
+  # bio: Hi, my name is Adityan Chembu. 
 
 # Contact links
 # twitter: https://twitter.com/ # Add your Twitter handle
-facebook: https://facebook.com/cgnarendiran/ # Add your Facebook handle
+facebook: https://facebook.com/cgadityan/ # Add your Facebook handle
 # dribbble: https://dribbble.com/ # Add your Dribbble handle
-instagram: https://instagram.com/cgnarendiran/ # Add your Instagram handle
+instagram: https://instagram.com/cgadityan/ # Add your Instagram handle
 # pinterest: https://pinterest.com/ # Add your Pinterest handle
-email: cgnarendiran@gmail.com # Add your Email address
-linkedin: https://linkedin.com/in/cgnarendiran/
+email: cgadityan@gmail.com # Add your Email address
+linkedin: https://linkedin.com/in/cgadityan/
 
 # Hero Section
 hero: true # To enable the section hero, use the value true. To turn off use the value false.
-hero-title: Narendiran Chembu # Add your hero title
+hero-title: Adityan CG # Add your hero title
 hero-subtitle: |
   Trying to understand this resplendent chaos called life.
   You can read more <a style="color:turquoise" href="/about/">about me</a> or check out <a style="color:turquoise"  href="/blog/">my blog</a> 
@@ -33,7 +33,7 @@ hero-image: images/ml_bb_6.jpg # Add background image in section hero
 footer-image: images/ml_bb_6.jpg # Add background image in footer
 
 # Comment Section (Disqus)
-# disqus-identifier: cgnarendiran # Add your shortname for Disqus Comment. For example mr-brown
+# disqus-identifier: cgadityan # Add your shortname for Disqus Comment. For example mr-brown
 
 # Google Analytics
 google-analytics: "" # Add your identifier. For example UA-99631805-1.
