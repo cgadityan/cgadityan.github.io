@@ -1,6 +1,6 @@
 title: Adityan CG
 # logo: "images/logo.svg" # You can add own logo image.
-logo: images/cg_logo.png
+logo: images/cga_logo.png
 description: Personal Website
 baseurl: "" # The subpath of your site, e.g. /blog
 url: "" # The base hostname & protocol for your site, e.g. http://example.com
@@ -14,7 +14,7 @@ author:
 # twitter: https://twitter.com/ # Add your Twitter handle
 facebook: https://facebook.com/cgadityan/ # Add your Facebook handle
 # dribbble: https://dribbble.com/ # Add your Dribbble handle
-instagram: https://instagram.com/cgadityan/ # Add your Instagram handle
+instagram: https://instagram.com/cgadityan_/ # Add your Instagram handle
 # pinterest: https://pinterest.com/ # Add your Pinterest handle
 email: cgadityan@gmail.com # Add your Email address
 linkedin: https://linkedin.com/in/cgadityan/
@@ -23,7 +23,7 @@ linkedin: https://linkedin.com/in/cgadityan/
 hero: true # To enable the section hero, use the value true. To turn off use the value false.
 hero-title: Adityan CG # Add your hero title
 hero-subtitle: |
-  Trying to understand this resplendent chaos called life.
+  Trying to wade through the river grandiloquent drama called life with a simple kayak. 
   You can read more <a style="color:turquoise" href="/about/">about me</a> or check out <a style="color:turquoise"  href="/blog/">my blog</a> 
   and <a style="color:turquoise"  href="/projects/">projects</a> 
 # Add your hero subtitle
