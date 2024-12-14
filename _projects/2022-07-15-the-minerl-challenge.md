@@ -3,7 +3,7 @@ layout: project
 title:  The MineRL Challenge
 date:   2020-12-31
 image:  images/project1_MineRL/minerl_challenge.jpg
-tags:   fixedwing swarming robotics ros ros2 collision avoidance uav 
+tags:   reinforcement learning Q-Learning environment state action rewards actor-critic policy 
 ---
 *On the cover: A minerl gym environment (From gameplay of an RL Agent, by openAI)*
 

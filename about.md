@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-image: images/hampta_pass.jpg
+image: images/cover2.jpg
 ---
 
 Hi, my name is Adityan. People call me CG (hence the logo). Bachelors in Electrical Engineering from <a style="color:teal" href="https://www.iitm.ac.in/">IIT Madras</a>. I'm a fitness enthusiast, where I like training for calisthenics skills. I like to follow new advancements in AI and embedded systems. I like playing Badminton, running or swimming in my free time.
