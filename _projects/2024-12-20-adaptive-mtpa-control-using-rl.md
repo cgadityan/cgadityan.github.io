@@ -1,0 +1,38 @@
+---
+layout: project
+title:  Synthetic Server Data Augmentation for Cyber security Testing
+date:   2024-12-20
+image:  images/project3/cover.jpg
+tags:   electric_vehicles pmsm reinforcement learning torque angular position velocity poles estimation theory filters
+---
+*Cross section of an Industrial Permanent Magnet Synchronous motor*
+
+
+## Adaptive PMSM Control Using Reinforcement Learning: 
+A New Frontier in Motor Efficiency Electric vehicles (EVs) are redefining transportation, but as these systems age, maintaining optimal motor performance becomes increasingly challenging. Traditional fixed torque maps—designed from initial motor characteristics—fail to capture the gradual changes that occur over time due to aging, demagnetization, or increasing internal resistance. The result? Reduced efficiency, increased heat loss, and overall suboptimal performance.
+
+In our project, we initially set out to create an intelligent agent that would run an EV over varied terrains, dynamically adjusting motor torque maps based on terrain characteristics. However, as we delved deeper into the intricacies of motor behavior, the idea evolved into a broader challenge: adaptive motor control. In essence, rather than merely tweaking maps to account for different terrains, our goal shifted to continuously updating the control strategy to match the evolving motor characteristics over its operational lifetime.
+
+## Problem Statement
+The Limitations of Fixed Torque Maps The current control system relies on a fixed relationship—mapping DC current (Idc) to the motor’s d-axis (id) and q-axis (iq) currents—for maintaining a constant torque and angular velocity. This static map, however, becomes outdated as the motor ages. The maximum torque per ampere (MTPA) curve and the optimal operating points shift, meaning that if the fixed map remains in use, the motor’s efficiency deteriorates and heat losses increase.
+One key reason for relying on fixed maps is the non-availability of direct Observed Torque measurements. In practice, torque is estimated indirectly from angular acceleration and other parameters. Although one could use adaptive filtering techniques like the Kalman filter to dynamically update the map, these methods often fall short due to the inherent inaccuracies in estimating Observed Torque.
+
+![alt](/images/project3/operating_region.png)
+
+## Role of Reinforcement Learning as Control agent
+Reinforcement Learning to the Rescue Reinforcement Learning (RL) provides a promising alternative. Unlike traditional control methods that depend on precise, plant-specific models, an RL agent learns directly from interactions with the system—even when some key variables, such as Observed Torque, are estimated imperfectly. By training on a discrete simulation of the motor’s operation, the RL agent adapts its control policy over time to meet efficiency and performance objectives despite the shifting dynamics.
+How It Works: State and Action Space: The RL controller receives state inputs—such as estimated torque (derived from angular acceleration and Idc), current operating points, and other real-time measurements—and outputs control actions from a finite control set. These actions update the motor control commands (e.g., switching states of the inverter). Reward Function: A carefully designed reward function ensures that the agent is penalized when operating outside safe or efficient boundaries, and rewarded when tracking the optimal torque reference. The reward structure accounts for various operational regions, from safe efficient operation to overcurrent conditions that could trigger an emergency shutdown. Training Dynamics: The agent is trained using a Deep Q-Learning algorithm. Through extensive simulation—sampling different operating scenarios—the agent learns an optimal policy that adapts to changes in motor behavior over time. 3. Implementation Highlights Adaptive Motor FOC Algorithm The proposed adaptive Field-Oriented Control (FOC) algorithm replaces the static torque map with a dynamic, learning-based system. Here are the key components:
+
+![alt](/images/project3/schematic.png)
+
+
+## Estimation of Angular Acceleration: 
+Using methods like N-Tap FIR filters or central difference approximations, we compute angular acceleration—a crucial parameter for estimating Observed Torque. Kalman Filter for Torque Estimation: Even though the Kalman filter can provide estimates of Observed Torque by balancing angular acceleration and DC current, its accuracy may suffer from measurement noise and delays. This uncertainty is precisely where RL can make a difference. Reinforcement Learning Controller: Our RL agent (using deep Q-learning) is trained to optimize torque control. It bridges the gap by effectively learning from the estimated Observed Torque and adapting to the motor’s changing characteristics. During training, the system simulates a wide range of operating conditions, ensuring that the agent can generalize well. Hyperparameter and Reward Design: Through rigorous hyperparameter optimization and careful design of the reward function, we ensure that the RL controller balances performance (torque tracking) and safety (avoiding overcurrent and overheating). <Insert visual: “Adaptive Motor Control System Diagram” outlining the flow from sensor measurements, estimation of torque, RL agent control decisions, and feedback loops>
+
+![alt](/images/project3/reward.png)
+
+
+## Research Insights and Future Directions Key Insights Dynamic Adaptation: 
+As the motor ages, the optimal operating point shifts. An RL-based controller can adapt dynamically, improving efficiency and reducing heat losses compared to static maps. Bridging Estimation Gaps: While traditional filtering (e.g., Kalman filters) may struggle with noisy or indirect torque measurements, the RL approach can learn robust control policies that compensate for estimation inaccuracies. Data-Driven Control: By simulating diverse operating scenarios, our system leverages discrete training examples from a running motor system, ensuring that the RL controller is well-prepared for real-world applications. Future Research Ideas Online Learning Implementation: Explore the feasibility of deploying the RL controller on industrial, low-cost control hardware and validate its real-time capabilities on a physical test bench. Hybrid Control Strategies: Investigate a hybrid approach that combines model-based estimation (e.g., Kalman filtering) with RL to further enhance control accuracy. Transfer Learning Across Motor Types: Extend the RL-based control strategy to other motor types, such as synchronous reluctance or interior permanent magnet motors, by generalizing the feature vector and reward design. Robustness Against Uncertainties: Develop methods to improve the robustness of the RL agent in the face of parameter variations and sensor noise, possibly by integrating probabilistic forecasting or uncertainty-aware learning techniques. Conclusion Our journey in adaptive PMSM control highlights a significant leap forward in electric drive control. By moving away from fixed torque maps and leveraging the power of reinforcement learning, we can create controllers that adapt dynamically to motor aging and shifting performance characteristics. This approach not only improves efficiency but also enhances safety by reducing heat losses and preventing overcurrent situations.
+
+The research underscores the potential of RL in replacing traditional control algorithms, especially in scenarios where direct measurements are impractical or noisy. As we look to the future, further integration of online learning and hybrid control methods promises to push the boundaries of adaptive motor control even further.

@@ -17,19 +17,29 @@ At first glance, the raw dataset was overwhelming. Inconsistencies in alert labe
 
 Server alerts aren’t just individual points—they come in sequences. The timing between events can stretch or shrink, and it’s crucial that any synthetic data generated captures this temporal structure. Traditional data generation methods might overlook these nuances, which could lead to unrealistic or even misleading test scenarios.
 
-Alert Types: Understanding the Data
+## Alert Types: Understanding the Data
 Before diving into the synthetic data generation process, it’s essential to understand the range of alert types present in the dataset. Here’s a breakdown of the available alerts:
 
 Interface, DBMS, INSTANCE: Indicators of the health and status of core services and databases.
+
 CPU Load Monitoring, CPU Utilization, CPU: Alerts related to processing power and load management.
+
 Disk, File System Capacity, Mount, InodeMount: These alerts focus on storage health—tracking disk usage, mount points, and filesystem capacities.
+
 Memory: Critical for monitoring system RAM and preventing resource exhaustion.
+
 URL Monitoring, Event Monitoring: Help track external dependencies and internal system events.
+
 Data Protection - Job Failed: Points to issues in backup or data protection routines.
+
 MediaAgents - MediaAgent went Offline, Device Status - Mount Path went Offline: Monitor the status of auxiliary services and connectivity.
+
 Missing Network Mapping for the Remote Site, Remote site connectivity not normal: Highlight network or connectivity issues between different locations.
+
 "Cluster Service Restarting Frequently": Indicates instability in cluster services.
+
 NGT Update Available: Could represent alerts for software or firmware updates.
+
 Each alert provides a unique perspective on the system’s behavior. By analyzing patterns across these diverse categories, we gain a comprehensive view of both normal operations and potential security incidents.
 
 <Insert visual: “Alert Categories Overview” diagram showing a breakdown of these alert types and their interrelations>
