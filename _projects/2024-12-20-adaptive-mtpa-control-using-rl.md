@@ -1,8 +1,8 @@
 ---
 layout: project
-title:  Synthetic Server Data Augmentation for Cyber security Testing
+title:  Adaptive Motor control using Reinforcement Learning
 date:   2024-12-20
-image:  images/project3/cover.jpg
+image:  images/project3/cover.png
 tags:   electric_vehicles pmsm reinforcement learning torque angular position velocity poles estimation theory filters
 ---
 *Cross section of an Industrial Permanent Magnet Synchronous motor*
