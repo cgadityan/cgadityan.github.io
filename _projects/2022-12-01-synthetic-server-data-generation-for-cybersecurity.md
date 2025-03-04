@@ -2,7 +2,7 @@
 layout: project
 title:  Synthetic Server Data Augmentation for Cyber security Testing
 date:   2022-12-01
-image:  images/project2/cover.png
+image:  images/project2/cover.jpg
 tags:   server netwrok alerts utility severity router ipaddress
 ---
 
@@ -61,7 +61,7 @@ In addition to synthetic data generation, our project incorporated an anomaly de
 Score Thresholding: Each example was assigned an anomaly score by the Isolation Forest. By closely analyzing the distribution of these scores, we determined a suitable threshold that distinguishes normal events from anomalies.
 Dynamic Thresholding: Recognizing that server behavior can vary over time, we also implemented dynamic threshold methods. These methods adjust the threshold value based on the average behavior observed within specific time windows. This adaptive approach helps capture transient changes and ensures the anomaly detection system remains sensitive during periods of both normal operation and potential disruption.
 
-![alt]{/images/project2/anomaly.png}
+![alt](/images/project2/anomaly.png)
 <Insert visual: “Dynamic Threshold Selection vs. Static Threshold” plot showing score distributions over time>
 
 This additional layer of anomaly detection ensures that any unexpected behavior in the server data is promptly flagged for further investigation—providing another critical layer to our cybersecurity testing framework.
